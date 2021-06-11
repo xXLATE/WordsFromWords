@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="WordsFromWords" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Background="Black">
-        <TextBox HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" TextWrapping="Wrap" Text="КАРТОШКА" VerticalAlignment="Top" Width="400" Background="#FF444444" Foreground="White" TextAlignment="Center" FontSize="36" FontFamily="Molot" IsReadOnly="True" Cursor="Arrow"/>
-        <UniformGrid HorizontalAlignment="Center" Height="250" Margin="0,120,0,0" VerticalAlignment="Top" Width="420" Background="#FF232323">
-            <Button Content="К" Width="50" Height="50" FontFamily="Molot" FontSize="36" Foreground="White" Background="#FF686868"/>
-        </UniformGrid>
+        <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Background="#FF444444" Foreground="White" TextAlignment="Center" FontSize="36" FontFamily="Molot" IsReadOnly="True" Cursor="Arrow"/>
+        <UniformGrid x:Name="uniformBoard" HorizontalAlignment="Center" Height="250" Margin="0,120,0,0" VerticalAlignment="Top" Width="420" Background="#FF232323"/>
         <UniformGrid HorizontalAlignment="Center" Height="248" Margin="570,120,0,0" VerticalAlignment="Top" Width="118" Columns="1">
-            <Button Content="Backspace" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
-            <Button Content="Check word" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
-            <Button Content="Exit" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
+            <Button x:Name="bckspc_btn" Content="Backspace" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14" Click="bckspc_btn_Click"/>
+            <Button x:Name="check_btn" Content="Check word" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14" Click="check_btn_Click"/>
+            <Button x:Name="exit_btn" Content="Exit" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14" Click="exit_btn_Click"/>
+        </UniformGrid>
+        <UniformGrid HorizontalAlignment="Center" Height="248" Margin="-570,120,0,0" VerticalAlignment="Top" Width="118" Columns="1">
+            <TextBlock x:Name="rightWords" TextWrapping="Wrap" Text="Осталось отгадать слов: 1111111" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"/>
+
         </UniformGrid>
     </Grid>
 </Window>

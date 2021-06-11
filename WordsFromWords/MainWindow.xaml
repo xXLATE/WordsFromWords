@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordsFromWords"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="WordsFromWords" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Background="Black">
+        <TextBox HorizontalAlignment="Center" Height="50" Margin="0,50,0,0" TextWrapping="Wrap" Text="КАРТОШКА" VerticalAlignment="Top" Width="400" Background="#FF444444" Foreground="White" TextAlignment="Center" FontSize="36" FontFamily="Molot" IsReadOnly="True" Cursor="Arrow"/>
+        <UniformGrid HorizontalAlignment="Center" Height="250" Margin="0,120,0,0" VerticalAlignment="Top" Width="420" Background="#FF232323">
+            <Button Content="К" Width="50" Height="50" FontFamily="Molot" FontSize="36" Foreground="White" Background="#FF686868"/>
+        </UniformGrid>
+        <UniformGrid HorizontalAlignment="Center" Height="248" Margin="570,120,0,0" VerticalAlignment="Top" Width="118" Columns="1">
+            <Button Content="Backspace" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
+            <Button Content="Check word" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
+            <Button Content="Exit" Width="100" Height="30" Foreground="White" Background="#FF686868" FontSize="14"/>
+        </UniformGrid>
     </Grid>
 </Window>
